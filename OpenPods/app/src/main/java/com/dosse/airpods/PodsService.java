@@ -247,41 +247,41 @@ public class PodsService extends Service {
                 }
                 if(notificationShowing){
                     if(ENABLE_LOGGING) Log.d(TAG,"Left: "+leftStatus+(chargeL?"+":"")+" "+"Right: "+rightStatus+(chargeR?"+":"")+" "+"Case: "+caseStatus+(chargeCase?"+":""));
-                    notificationBig.setImageViewResource(R.id.leftPodImg,leftStatus<=10?R.drawable.left_pod:R.drawable.left_pod_disconnected);
-                    notificationBig.setImageViewResource(R.id.rightPodImg,rightStatus<=10?R.drawable.right_pod:R.drawable.right_pod_disconnected);
-                    notificationBig.setImageViewResource(R.id.podCaseImg,caseStatus<=10?R.drawable.pod_case:R.drawable.pod_case_disconnected);
+                    notificationBig.setImageViewResource(R.id.leftPowerBeatsImg,leftStatus<=10?R.drawable.left_powerbeats:R.drawable.left_powerbeats_disconnected);
+                    notificationBig.setImageViewResource(R.id.rightPowerBeatsImg,rightStatus<=10?R.drawable.right_powerbeats:R.drawable.right_powerbeats_disconnected);
+                    notificationBig.setImageViewResource(R.id.PowerBeatsCaseImg,caseStatus<=10?R.drawable.powerbeats_case:R.drawable.powerbeats_case_disconnected);
                     if(System.currentTimeMillis()-lastSeenConnected<TIMEOUT_CONNECTED) {
-                        notificationBig.setViewVisibility(R.id.leftPodText, View.VISIBLE);
-                        notificationBig.setViewVisibility(R.id.rightPodText, View.VISIBLE);
-                        notificationBig.setViewVisibility(R.id.podCaseText, View.VISIBLE);
-                        notificationBig.setViewVisibility(R.id.leftPodUpdating, View.INVISIBLE);
-                        notificationBig.setViewVisibility(R.id.rightPodUpdating, View.INVISIBLE);
-                        notificationBig.setViewVisibility(R.id.podCaseUpdating, View.INVISIBLE);
-                        notificationSmall.setViewVisibility(R.id.leftPodText, View.VISIBLE);
-                        notificationSmall.setViewVisibility(R.id.rightPodText, View.VISIBLE);
-                        notificationSmall.setViewVisibility(R.id.podCaseText, View.VISIBLE);
-                        notificationSmall.setViewVisibility(R.id.leftPodUpdating, View.INVISIBLE);
-                        notificationSmall.setViewVisibility(R.id.rightPodUpdating, View.INVISIBLE);
-                        notificationSmall.setViewVisibility(R.id.podCaseUpdating, View.INVISIBLE);
-                        notificationBig.setTextViewText(R.id.leftPodText, (leftStatus==10?"100%":leftStatus<10?((leftStatus+1)*10+"%"):"") + ((chargeL && leftStatus < 10) ? "+" : ""));
-                        notificationBig.setTextViewText(R.id.rightPodText, (rightStatus==10?"100%":rightStatus<10?((rightStatus+1)*10+"%"):"") + ((chargeR && rightStatus < 10) ? "+" : ""));
-                        notificationBig.setTextViewText(R.id.podCaseText, (caseStatus==10?"100%":caseStatus<10?((caseStatus+1)*10+"%"):"") + ((chargeCase && caseStatus < 10) ? "+" : ""));
-                        notificationSmall.setTextViewText(R.id.leftPodText, (leftStatus==10?"100%":leftStatus<10?((leftStatus+1)*10+"%"):"") + ((chargeL && leftStatus < 10) ? "+" : ""));
-                        notificationSmall.setTextViewText(R.id.rightPodText, (rightStatus==10?"100%":rightStatus<10?((rightStatus+1)*10+"%"):"") + ((chargeR && rightStatus < 10) ? "+" : ""));
-                        notificationSmall.setTextViewText(R.id.podCaseText, (caseStatus==10?"100%":caseStatus<10?((caseStatus+1)*10+"%"):"") + ((chargeCase && caseStatus < 10) ? "+" : ""));
+                        notificationBig.setViewVisibility(R.id.leftPowerBeatsText, View.VISIBLE);
+                        notificationBig.setViewVisibility(R.id.rightPowerBeatsText, View.VISIBLE);
+                        notificationBig.setViewVisibility(R.id.PowerBeatsCaseText, View.VISIBLE);
+                        notificationBig.setViewVisibility(R.id.leftPowerBeatsUpdating, View.INVISIBLE);
+                        notificationBig.setViewVisibility(R.id.rightPowerBeatsUpdating, View.INVISIBLE);
+                        notificationBig.setViewVisibility(R.id.PowerBeatsCaseUpdating, View.INVISIBLE);
+                        notificationSmall.setViewVisibility(R.id.leftPowerBeatsText, View.VISIBLE);
+                        notificationSmall.setViewVisibility(R.id.rightPowerBeatsText, View.VISIBLE);
+                        notificationSmall.setViewVisibility(R.id.PowerBeatsCaseText, View.VISIBLE);
+                        notificationSmall.setViewVisibility(R.id.leftPowerBeatsUpdating, View.INVISIBLE);
+                        notificationSmall.setViewVisibility(R.id.rightPowerBeatsUpdating, View.INVISIBLE);
+                        notificationSmall.setViewVisibility(R.id.PowerBeatsCaseUpdating, View.INVISIBLE);
+                        notificationBig.setTextViewText(R.id.leftPowerBeatsText, (leftStatus==10?"100%":leftStatus<10?((leftStatus+1)*10+"%"):"") + ((chargeL && leftStatus < 10) ? "+" : ""));
+                        notificationBig.setTextViewText(R.id.rightPowerBeatsText, (rightStatus==10?"100%":rightStatus<10?((rightStatus+1)*10+"%"):"") + ((chargeR && rightStatus < 10) ? "+" : ""));
+                        notificationBig.setTextViewText(R.id.PowerBeatsCaseText, (caseStatus==10?"100%":caseStatus<10?((caseStatus+1)*10+"%"):"") + ((chargeCase && caseStatus < 10) ? "+" : ""));
+                        notificationSmall.setTextViewText(R.id.leftPowerBeatsText, (leftStatus==10?"100%":leftStatus<10?((leftStatus+1)*10+"%"):"") + ((chargeL && leftStatus < 10) ? "+" : ""));
+                        notificationSmall.setTextViewText(R.id.rightPowerBeatsText, (rightStatus==10?"100%":rightStatus<10?((rightStatus+1)*10+"%"):"") + ((chargeR && rightStatus < 10) ? "+" : ""));
+                        notificationSmall.setTextViewText(R.id.PowerBeatsCaseText, (caseStatus==10?"100%":caseStatus<10?((caseStatus+1)*10+"%"):"") + ((chargeCase && caseStatus < 10) ? "+" : ""));
                     }else{
-                        notificationBig.setViewVisibility(R.id.leftPodText, View.INVISIBLE);
-                        notificationBig.setViewVisibility(R.id.rightPodText, View.INVISIBLE);
-                        notificationBig.setViewVisibility(R.id.podCaseText, View.INVISIBLE);
-                        notificationBig.setViewVisibility(R.id.leftPodUpdating, View.VISIBLE);
-                        notificationBig.setViewVisibility(R.id.rightPodUpdating, View.VISIBLE);
-                        notificationBig.setViewVisibility(R.id.podCaseUpdating, View.VISIBLE);
-                        notificationSmall.setViewVisibility(R.id.leftPodText, View.INVISIBLE);
-                        notificationSmall.setViewVisibility(R.id.rightPodText, View.INVISIBLE);
-                        notificationSmall.setViewVisibility(R.id.podCaseText, View.INVISIBLE);
-                        notificationSmall.setViewVisibility(R.id.leftPodUpdating, View.VISIBLE);
-                        notificationSmall.setViewVisibility(R.id.rightPodUpdating, View.VISIBLE);
-                        notificationSmall.setViewVisibility(R.id.podCaseUpdating, View.VISIBLE);
+                        notificationBig.setViewVisibility(R.id.leftPowerBeatsText, View.INVISIBLE);
+                        notificationBig.setViewVisibility(R.id.rightPowerBeatsText, View.INVISIBLE);
+                        notificationBig.setViewVisibility(R.id.PowerBeatsCaseText, View.INVISIBLE);
+                        notificationBig.setViewVisibility(R.id.leftPowerBeatsUpdating, View.VISIBLE);
+                        notificationBig.setViewVisibility(R.id.rightPowerBeatsUpdating, View.VISIBLE);
+                        notificationBig.setViewVisibility(R.id.PowerBeatsCaseUpdating, View.VISIBLE);
+                        notificationSmall.setViewVisibility(R.id.leftPowerBeatsText, View.INVISIBLE);
+                        notificationSmall.setViewVisibility(R.id.rightPowerBeatsText, View.INVISIBLE);
+                        notificationSmall.setViewVisibility(R.id.PowerBeatsCaseText, View.INVISIBLE);
+                        notificationSmall.setViewVisibility(R.id.leftPowerBeatsUpdating, View.VISIBLE);
+                        notificationSmall.setViewVisibility(R.id.rightPowerBeatsUpdating, View.VISIBLE);
+                        notificationSmall.setViewVisibility(R.id.PowerBeatsCaseUpdating, View.VISIBLE);
                     }
                     mNotifyManager.notify(1,mBuilder.build());
                 }
