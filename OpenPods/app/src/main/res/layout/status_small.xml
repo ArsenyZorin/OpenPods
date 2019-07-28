@@ -18,7 +18,7 @@
         <ImageView
             android:layout_width="15dp"
             android:layout_height="30dp"
-            android:src="@drawable/left_pod"
+            android:src="@drawable/airpods/left_pod"
             android:id="@+id/leftPodImg"
             />
 
@@ -55,7 +55,7 @@
         <ImageView
             android:layout_width="15dp"
             android:layout_height="30dp"
-            android:src="@drawable/right_pod"
+            android:src="@drawable/airpods/right_pod"
             android:id="@+id/rightPodImg"
             />
 
@@ -92,7 +92,7 @@
         <ImageView
             android:layout_width="20dp"
             android:layout_height="30dp"
-            android:src="@drawable/pod_case"
+            android:src="@drawable/airpods/pod_case"
             android:id="@+id/podCaseImg"
             />
 
@@ -118,5 +118,117 @@
 
     </RelativeLayout>
 
+	<!-- PowerBeats Pro -->
+
+    <RelativeLayout
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/leftPowerBeats"
+        >
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="30dp"
+            android:src="@drawable/powerbeats/left_powerbeats"
+            android:id="@+id/leftPowerBeatsImg"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_toRightOf="@id/leftPowerBeatsImg"
+            android:gravity="center_vertical"
+            android:text="100%+"
+            android:id="@+id/leftPowerBeatsText"
+            android:textColor="@color/black"
+            />
+
+        <ProgressBar
+            android:id="@+id/leftPowerBeatsUpdating"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="18dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/leftPowerBeatsImg"
+            android:indeterminate="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/leftPowerBeats"
+        android:id="@+id/rightPowerBeats"
+        >
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="30dp"
+            android:src="@drawable/powerbeats/right_powerbeats"
+            android:id="@+id/rightPowerBeatsImg"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_toRightOf="@id/rightPowerBeatsImg"
+            android:gravity="center_vertical"
+            android:text="100%+"
+            android:id="@+id/rightPowerBeatsText"
+            android:textColor="@color/black"
+            />
+
+        <ProgressBar
+            android:id="@+id/rightPowerBeatsUpdating"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="18dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/rightPowerBeatsImg"
+            android:indeterminate="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/rightPowerBeats"
+        android:id="@+id/PowerBeatsCase"
+        >
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:src="@drawable/powerbeats/case"
+            android:id="@+id/PowerBeatsCaseImg"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_toRightOf="@id/PowerBeatsCaseImg"
+            android:gravity="center_vertical"
+            android:text="100%+"
+            android:id="@+id/PowerBeatsCaseText"
+            android:textColor="@color/black"
+            />
+
+        <ProgressBar
+            android:id="@+id/PowerBeatsCaseUpdating"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="18dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/PowerBeatsCaseImg"
+            android:indeterminate="true"
+            />
+
+    </RelativeLayout>
 
 </RelativeLayout>
